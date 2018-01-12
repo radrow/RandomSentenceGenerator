@@ -13,9 +13,9 @@ data Sentence = PlainSentence String
 toString :: Sentence -> String
 toString = \case
   PlainSentence s -> s
-  Not a -> "nieprawda, że " ++ toString a
-  Or a b -> "(" ++ toString a ++ " lub " ++ toString b ++ ")"
-  And a b -> "(" ++ toString a ++ " oraz " ++ toString b++ ")"
-  Impl a b -> "(jeśli " ++ toString a ++ ", to " ++ toString b++ ")"
-  Iff a b -> "(" ++ toString a ++ " wtedy i tylko wtedy, gdy " ++ toString b++ ")"
+  Not a -> "it is not true, that " ++ toString a
+  Or a b -> "(" ++ toString a ++ " or " ++ toString b ++ ")"
+  And a b -> "(" ++ toString a ++ " and " ++ toString b++ ")"
+  Impl a b -> "(if " ++ toString a ++ ", then " ++ toString b++ ")"
+  Iff a b -> "(" ++ toString a ++ " if and only if when " ++ toString b++ ")"
 
